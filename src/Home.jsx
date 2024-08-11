@@ -1,8 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Create from './Create'
+import axios from 'axios'
+import { BsCircleFill } from 'react-icons/bs'
+import { BsFillTrashFill } from 'react-icons/bs'
 
 const Home = () => {
     const [todos, setTodos] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:3001/get')
+        .then(result => setTodos(result.data))
+        .catch(err => console.log(err))
+    }, [])
+
+    const handleEdit = () => {
+
+    }
+    
     return (
         <div className='home'>
            <h2>Pink Panther ToDo List</h2> 
@@ -15,8 +28,14 @@ const Home = () => {
                 </div>
                 :
                 todos.map(todo =>  (
-                    <div>
-                        {todo}
+                    <div className='task'>
+                        <div className='checkbox' onClick={handleEdit}>
+                            <BsCircleFill className='icon'/>
+                            <p>{todo.task}</p>
+                        </div>
+                        <div>
+                            <span><BsFillTrashFill className='icon'/></span>
+                        </div>
                     </div>
                 ))
            }
