@@ -1,11 +1,24 @@
+@import url('https://fonts.cdnfonts.com/css/kg-attack-of-the-robots');
+
 body {
-  background-color: pink;
+  background:url(../assets/pinkpantherbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.title {
+  font-family: 'KG Attack of the Robots', sans-serif;
+  font-size: 55px;                                            
+}
+
+.title span {
+  color: #FAC0C8;
 }
 
 .create_form input {
@@ -17,21 +30,21 @@ body {
 
 .create_form button {
   padding: 10px;
-  background-color: black;
-  color: white;
+  background-color: #FAC0C8;
+  color: black;
   cursor: pointer;
 }
 
 .task {
   display: flex;
   align-items: center;
-  width: 345px;
+  width: 360px;
   justify-content: space-between;
-  background-color: black;
-  color: white;
+  background-color: #FAC0C8;
+  color: black;
   height: 35px;
   padding: 2px 5px 2px 5px;
-  margin-top: 2px;
+  margin-top: 12px;
 }
 
 .checkbox {
