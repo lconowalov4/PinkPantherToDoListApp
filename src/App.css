@@ -25,7 +25,7 @@ body {
 .task {
   display: flex;
   align-items: center;
-  width: 354px;
+  width: 345px;
   justify-content: space-between;
   background-color: black;
   color: white;
@@ -50,4 +50,8 @@ body {
 
 .task div .icon {
   cursor: pointer;
+}
+
+.line_through {
+  text-decoration: line-through;
 }
